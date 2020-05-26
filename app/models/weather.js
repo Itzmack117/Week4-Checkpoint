@@ -13,7 +13,7 @@ export default class Weather {
     this.celsius = Math.round(data.main.temp - 273)
   }
   get Template() {
-    return /*html*/`<div class="text-center"><div>${this.celsius}C</div>
-    <div>${this.city}</div></div>`
+    return /*html*/`<h4><div class="text-center"><div>${this.celsius}C</div>
+    <div>${this.city}</div></div></h4>`
   }
 }

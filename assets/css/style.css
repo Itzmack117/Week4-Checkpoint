@@ -10,9 +10,9 @@
 }
 
 
-*{
+/* *{
   outline: red solid 1px;
-}
+} */
 .inline{
   display: inline;
 }

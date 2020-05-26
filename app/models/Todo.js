@@ -1,7 +1,7 @@
 export default class Todo {
   constructor(data) {
     this._id = data.id
-    this.body = data.body
+    this.description = data.description
     this.done = data.bool
 
   }

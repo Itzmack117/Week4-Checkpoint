@@ -17,8 +17,6 @@ export default class TodoController {
     store.subscribe("todos", _drawTodos);
     //TODO Remember to register your subscribers
     TodoService.getTodos();
-    this.addTodo(event)
-
   }
 
   addTodo(event) {

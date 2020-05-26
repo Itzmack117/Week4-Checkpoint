@@ -1,0 +1,23 @@
+#todo-error{
+  color: red;
+  font-size: 2em;
+}
+
+
+#weather{
+  display: flex;
+  justify-content: end;
+}
+
+
+*{
+  outline: red solid 1px;
+}
+.inline{
+  display: inline;
+}
+.card-txt{
+  background-color: #313131;
+  color:aliceblue;
+  border-radius: 5%;
+}

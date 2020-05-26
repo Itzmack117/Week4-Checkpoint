@@ -4,13 +4,14 @@ function drawClock() {
     let hours = date.getHours()
     let minutes = date.getMinutes()
     console.log(hours, minutes);
+    let template = <h1>${hours}:${minutes}</h1>
+    document.getElementById("clock").innerHTML = template
 
-    document.getElementById('clock').innerHTML = <h1>${hours}:${minutes}</h1>
 }
 
 export default class ClockController {
     constructor() {
-        setInterval(drawClock, 30000)
+        setInterval(drawClock, 60000)
     }
 
 

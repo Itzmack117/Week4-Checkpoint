@@ -7,8 +7,8 @@ import store from "../store.js";
 //      (you may wish to set it as a background image)
 
 function _drawImage() {
-    // let img = store.State.activeImage
-    // document.body.style.backgroundImage = "url('')";
+    let img = store.State.activeImage
+    document.body.style.backgroundImage = `url('${img}')`
 }
 
 export default class ImageController {

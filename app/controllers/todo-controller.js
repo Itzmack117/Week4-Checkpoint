@@ -7,9 +7,10 @@ function _drawTodos() {
   let template = ''
   store.State.todos.forEach(item => {
     template += `<li class="action">
-    <input type="checkbox">${item.body}<i class="fa fa-trash"></i></li>`
+    <div class ="inline"><input class="align-middle" type="checkbox" ${item.completed ? "checked" : ""}><div onclick="app.TodoController.toggleTodoStatus(${item._id})">${item.description}</div></div><button class="btn btn-danger deleteBtn float-right" onclick="app.TodoController.removeTodo(${item._id})"></button></li>`
   });
   document.getElementById('list-items').innerHTML = template;
+  // document.getElementById('task-count').innerText = 
 }
 
 export default class TodoController {
@@ -24,7 +25,7 @@ export default class TodoController {
     let formData = event.target;
     console.log(formData)
     let todo = {
-      body: formData.body.value
+      description: formData.description
       //TODO build the todo object from the data that comes into this method
     };
     console.log(todo)

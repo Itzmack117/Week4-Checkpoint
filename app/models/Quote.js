@@ -4,7 +4,7 @@ export default class Quote {
         this.author = data.author
     }
     get Template() {
-        return `<div>${this.text}</div>
-    <div class="text-center">-${this.author}</div>`
+        return `<div class="quote">${this.text}</div>
+    <div class="text-center author hide">-${this.author}</div>`
     }
 }

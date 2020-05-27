@@ -3,6 +3,7 @@ import Todo from "./models/Todo.js"
 import Quote from "./models/Quote.js";
 
 let _state = {
+  activeTemp: null,
   activeImage: null,
   /**@type {Quote} */
   activeQuote: null,
@@ -16,6 +17,7 @@ let _state = {
  * @type {{[x:string]: function[]}}
  */
 let _listeners = {
+  activeTemp: [],
   weather: [],
   activeQuote: [],
   activeImage: [],

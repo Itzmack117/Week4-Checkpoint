@@ -28,23 +28,25 @@ class TodoService {
 
   toggleTodoStatusAsync(todoId) {
     let todo = store.State.todos.find(todo => todo._id == todoId);
+    let done = todo.completed
     //TODO Make sure that you found a todo,
     //		and if you did find one
     //		change its completed status to whatever it is not (ex: false => true or true => false)
-    if (todo.done = false) {
-      return todo.done = true
-    } else if (todo.done = false) {
-      return todo.done = true
-    }
-
-    todoApi.put(todoId, todo);
+    if (done == false) {
+      done = true
+    } else { done = false }
+    console.log(done)
+    // todoApi.put(todoId, todo);
     //TODO do you care about this data? or should you go get something else?
+
   }
 
   removeTodoAsync(todoId) {
     //TODO Work through this one on your own
     //		what is the request type
     //		once the response comes back, what do you need to insure happens?
+    let id = store.State.todos.find(t => t._id == todoId)
+    console.log(id)
   }
 }
 

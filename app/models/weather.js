@@ -11,9 +11,16 @@ export default class Weather {
     this.city = data.name
     this.kelvin = data.main.temp
     this.celsius = Math.round(data.main.temp - 273)
+    this.bestDegrees = Math.round((this.celsius * 1.8) + 32)
+    this.Temp = [this.bestDegrees, this.celsius]
   }
-  get Template() {
-    return /*html*/`<h4><div class="text-center"><div>${this.celsius}C</div>
+  get TemplateC() {
+    return /*html*/`<h4 class= "pointer" onclick="app.WeatherController.toggleTemp(event)"><div class="text-center"><div>${this.celsius}C</div>
+    <div>${this.city}</div></div></h4>`
+
+  }
+  get TemplateF() {
+    return /*html*/`<h4 class= "pointer" onclick="app.WeatherController.toggleTemp(event)"><div class="text-center"><div>${this.bestDegrees}F</div>
     <div>${this.city}</div></div></h4>`
   }
 }

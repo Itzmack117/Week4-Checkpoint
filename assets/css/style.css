@@ -9,14 +9,48 @@
   justify-content: end;
 }
 
+#clock{
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 153px;
+}
 
+.hide {
+  display: none;
+}
+
+.pointer{
+  cursor: pointer;
+  user-select: none;
+}
+
+.quote:hover + .hide {
+  display: block;
+}
+
+body{
+  color: white;
+  text-shadow: 1px 1px white;
+  background-size: cover;
+}
 /* *{
   outline: red solid 1px;
 } */
 .inline{
-  display: inline;
+  display: inline-flex
+}
+
+
+.deleteBtn{
+  height: 1em;
+  width: 1em;
+}
+
+footer{
+  margin-top: 25rem;
 }
 .card-txt{
+  display: flex;
   background-color: #313131;
   color:aliceblue;
   border-radius: 5%;

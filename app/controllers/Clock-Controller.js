@@ -3,15 +3,19 @@ function drawClock() {
     let date = clockService.clockDate()
     let hours = date.getHours()
     let minutes = date.getMinutes()
-    console.log(hours, minutes);
-    let template = <h1>${hours}:${minutes}</h1>
-    document.getElementById("clock").innerHTML = template
+    if (minutes < 10) {
+        let minVal = `0${minutes}`
+        return document.getElementById("clock").innerHTML = `<div class="clock">${hours}:${minVal}</div>`
+    }
+    else {
+    }
+    document.getElementById("clock").innerHTML = `<div class="clock">${hours}:${minutes}</div>`
 
 }
 
 export default class ClockController {
     constructor() {
-        setInterval(drawClock, 60000)
+        setInterval(drawClock, 1000)
     }
 
 

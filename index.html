@@ -13,7 +13,7 @@
 
 <body id=bg-image>
 	<header>
-		<nav class="navbar">
+		<nav class="navbar sticky-top">
 			<span class="navbar-brand mb-0 h1">Navbar</span>
 			<div id="weather"></div>
 		</nav>
@@ -22,7 +22,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col justify-content-center">
-					<div id="clock"></div>
+					<div id="clock">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -41,14 +42,19 @@
 					<div class="align-items-end">
 						<div class="card card-txt" style="width: 18rem;">
 							<div class="card-body">
-								<h5 class="card-title">Todo List</h5>
+								<div>
+									<h5 id="task-count" class="float-left"></h5>
+									<h5 class="card-title text-center">Todo List</h5>
+								</div>
 								<h6 class="card-subtitle mb-2 text-muted"></h6>
 								<div class="inline">
 									<form onsubmit="app.TodoController.addTodo(event)">
 										<div id="todo-error"></div>
 										<ol id="list-items"></ol>
-										<input class="form-control" type="text" name="body" placeholder="Add New Item">
-										<button class="btn btn-primary" type="submit">Add</button>
+										<div><input class="form-control" type="text" name="body"
+												placeholder="Add New Item">
+											<button class="btn btn-primary" type="submit">Add</button>
+										</div>
 									</form>
 								</div>
 							</div>
